@@ -73,7 +73,7 @@
             geolocate.onclick = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                map.locate();
+                map.locate(enableHighAccuracy:true);
             };
         }
 
