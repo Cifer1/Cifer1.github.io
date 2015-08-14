@@ -53,9 +53,11 @@
     </style>
    
     <div id="map"></div>
-     <div id="nav">
-        <button type="button" class="btn btn-default navbar-btn" href="index.html">1st Floor</button>
-        <button type="button" class="btn btn-default navbar-btn" href="floor2.html">2nd Floor</button>
+     <div id="nav" class="navbar navbar-default">
+         <ul class="nav navbar-nav"> 
+            <li class="active"><a href="index.html">1st Floor <span class="sr-only">(current)</span></a></li>
+            <li><a href="floor2.html">Floor 2</a></li>
+         </ul>
     </div>
     <a href="#" id="geolocate" class="ui-button">Find me</a>
     <script>
