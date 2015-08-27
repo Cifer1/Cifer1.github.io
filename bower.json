@@ -1,0 +1,28 @@
+{
+  "name": "cifer1.github.io",
+  "version": "0.0.0",
+  "description": "Mapping app",
+  "main": "index.html",
+  "keywords": [
+    "map",
+    "organization"
+  ],
+  "authors": [
+    "Caleb Trotz",
+    "Sky Li",
+    "Adarsh Suresh",
+    "and Victor Wang"
+  ],
+  "license": "MIT",
+  "homepage": "cifer1.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.0"
+  }
+}
