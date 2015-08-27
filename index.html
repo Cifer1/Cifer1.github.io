@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset=utf-8 />
-    <title>Geolocation</title>
-    <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    <title>AB Maps</title>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -17,101 +14,21 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
-    <style>
-        .ui-button {
-            background: #3887BE;
-            color: #FFF;
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 160px;
-            margin: -20px 0 0 -80px;
-            z-index: 100;
-            text-align: center;
-            padding: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.4);
-            border-radius: 3px;
-        }
-        .ui-button:hover {
-            background: #3074a4;
-            color: #fff;
-        }
-    </style>
-   
-    <div id="map"></div>
-     <div id="nav" class="navbar navbar-default">
-         <ul class="nav navbar-nav"> 
-            <li class="active"><a href="index.html">1st Floor <span class="sr-only">(current)</span></a></li>
-            <li><a href="floor2.html">Floor 2</a></li>
-         </ul>
-    </div>
-    <a href="#" id="geolocate" class="ui-button">Find me</a>
-    <script>
-        L.mapbox.accessToken = 'pk.eyJ1IjoiY2lmZXIxIiwiYSI6IjI2ZmVhZWEwYzZjMmU4YzVmN2M1Y2U3NTJiOTFjZjAxIn0.85FOiPnr8trWcOvgVWxNeA';
-        var geolocate = document.getElementById('geolocate');
-        var northEast = L.latLng(42.481691, -71.455479),
-            southWest = L.latLng(42.477819, -71.460973),
-            bounds = L.latLngBounds(southWest, northEast);
-        var map = L.mapbox.map('map', 'cifer1.n51k7469', {
-            maxBounds: bounds
-        });
-
-        var myLayer = L.mapbox.featureLayer().addTo(map);
-
-        if (!navigator.geolocation) {
-            geolocate.innerHTML = 'Geolocation is not available';
-        } else {
-            geolocate.onclick = function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                map.locate(false, false, Infinity, 10000, 0, true);
-            };
-        }
-
-        // Once we've got a position, zoom and center the map
-        // on it, and add a single marker.
-        map.on('locationfound', function(e) {
-            map.fitBounds(e.bounds);
-
-            myLayer.setGeoJSON({
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: [e.latlng.lng, e.latlng.lat]
-                },
-                properties: {
-                    'title': 'You are here',
-                    'marker-color': '#ff8888',
-                    'marker-symbol': 'star'
-                }
-            });
-
-            // And hide the geolocation button
-            geolocate.parentNode.removeChild(geolocate);
-        });
-
-        // If the user chooses not to allow their location
-        // to be shared, display an error message.
-        map.on('locationerror', function() {
-            geolocate.innerHTML = 'Position could not be found';
-        });
-    </script>
+<div id="nav" class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="people.html">People</a></li>
+        </ul>
+</div>
+    
+    
+    
 </body>
-
 </html>
+
