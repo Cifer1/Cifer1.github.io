@@ -63,7 +63,12 @@
     <script>
         L.mapbox.accessToken = 'pk.eyJ1IjoiY2lmZXIxIiwiYSI6IjI2ZmVhZWEwYzZjMmU4YzVmN2M1Y2U3NTJiOTFjZjAxIn0.85FOiPnr8trWcOvgVWxNeA';
         var geolocate = document.getElementById('geolocate');
-        var map = L.mapbox.map('map', 'cifer1.n51k7469');
+        var northEast = L.latLng(42.481691, -71.455479),
+            southWest = L.latLng(42.477819, -71.460973),
+            bounds = L.latLngBounds(southWest, northEast);
+        var map = L.mapbox.map('map', 'cifer1.n51k7469', {
+            maxBounds: bounds
+        });
 
         var myLayer = L.mapbox.featureLayer().addTo(map);
 
