@@ -4,18 +4,12 @@
 <head>
     <meta charset=utf-8 />
     <title>Geolocation</title>
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+    </script>
     <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="import" href="bower_components/paper-material/paper-material.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
     <style>
         body {
@@ -55,14 +49,16 @@
     </style>
 
     <div id="map"></div>
-    <div id="nav" class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">1st Floor <span class="sr-only">(current)</span></a>
-            </li>
-            <li><a href="floor2.html">Floor 2</a>
-            </li>
+    <div id="nav">
+    <paper-material>    
+    <ul>
+            <li><paper-button><a href="index.html">Home</a></paper-button></li>
+        <li><paper-button><a href="map.html">Map</a></paper-button></li>
+        <li><paper-button><a href="about.html">About</a></paper-button></li>
+        <li><paper-button><a href="people.html">People</a></paper-button></li>
         </ul>
-    </div>
+    </paper-material>    
+</div>
     <a href="#" id="geolocate" class="ui-button">Find me</a>
     <script>
         L.mapbox.accessToken = 'pk.eyJ1IjoiY2lmZXIxIiwiYSI6IjI2ZmVhZWEwYzZjMmU4YzVmN2M1Y2U3NTJiOTFjZjAxIn0.85FOiPnr8trWcOvgVWxNeA';
