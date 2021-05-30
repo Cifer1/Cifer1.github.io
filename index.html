@@ -4,41 +4,66 @@
   <meta charset="utf-8">
   <title>Caleb Trotz</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto');
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-  .name {
-    font-family: 'Roboto', sans-serif;
-  }
-  .intro {
-    width: 25%;
-  }
-  header {
-    text-align: left;
-    padding-left: 10%;
-  }
-  p {
-    font-family: 'Open Sans', sans-serif;
-  }
-  a {
-    text-decoration: none;
-  }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="path.png"/>
+  <link href="style.css" rel="stylesheet">
 </head>
-<body>
- <header>
-   <h1 class="name">
-     Caleb Trotz
-   </h1>
-   <p class="intro">
-     I am a student at
-     <a href="https://www.brown.edu">Brown</a> currently
-     studying Mathematics and Computer Science. I make, bake,
-     cook, read, <a href="http://visual.cs.brown.edu/">research</a>, and
-     <a href="https://www.brown.edu/campus-life/health/services/promotion/shag">educate</a>.
-     View my current <a href="CalebTrotzResumeFeb2019.pdf">résumé</a>.
-   </p>
- </header>
+<body style="background-color: whitesmoke;">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  <nav id="mainnav" class="navbar navbar-dark"  style="background-color: #536fdb;">
+    <div class="container" >
+      <div class="navbar-header" >
+        <h1 class="navbar-brand" style="font-size:1.8rem">
+        <a href="#" style="text-decoration: none; color:#FFFFFF">Caleb Trotz </a> <small> 🏳️‍🌈 </small> 
+        </h1>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-2 justify-content-start">
+        <img src="CalebTrotz.jpg" class="img-fluid rounded"/>
+        <div id="email" class="text-center" style="margin-bottom: 25px;">
+          <a href="mailto:caleb_trotz@brown.edu">caleb_trotz@brown.edu</a>
+        </div>
+        <div id="teaching">
+          <h5>Teaching</h5>
+          <ul class="list-inline">
+            <li ><b>Fall 2021</b> <br>Head Teaching Assistant <br><a href="https://cs.brown.edu/courses/cs123/index.shtml">cs1230: Intro to Computer Graphics</a></li>
+            <li ><b>Fall 2020</b><br> Undergraduate Teaching Assistant <a href="https://cs.brown.edu/courses/cs123/index.shtml">cs1230: Intro to Computer Graphics</a></li>
+            <li ><b>Spring 2020</b> <br>Undergraduate Teaching Assistant <a href="https://cs.brown.edu/courses/cs0320/">cs0320: Software Engineering</a></li>
+            <li ><b>Fall 2019</b> <br> Head Teaching Assistant <br> <a href="http://cs.brown.edu/courses/csci0190/">cs0190: Accelerated Intro to Computer Science</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-9 justify-content-around">
+        <div id="intro" style="margin-bottom: 1vw;">
+          <h1 id="hello">Hi!</h1>
+          
+          <div class="text-break" style="font-size:1rem;">
+            I'm a fourth-year undergraduate at <a href="https://brown.edu" class="inline-link">Brown</a> studying <a class="inline-link" href="https://www.math.brown.edu">math</a> and 
+            <a class="inline-link" href="https://www.cs.brown.edu">computer science</a>. My degree is advised by <a href="https://www.cs.brown.edu/people/jhughes/" class="inline-link">Spike Hughes</a>.
+            I do research in the <b><a class="inline-link" href="https://www.visual.cs.brown.edu/">Visual Computing Group</a></b>, where I'm advised by <b><a class="inline-link" href="https://dritchie.github.io/">Daniel Ritchie</a></b>.
+            I'm primarily interested in using tools and techniques from artificial intelligence to analyze and generate high-quality structured geometry. 
+          </div>
+        </div>
+        <div id="current-projects">
+          <h3>Current Projects</h3>
+          <ul>
+            <li >Hi</li>
+          </ul>
+        </div>
+        
+        <div id="past-projects">
+          <h3>Past Projects</h3>
+          <ul>
+            <li >Hi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
